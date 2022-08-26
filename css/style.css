@@ -1,0 +1,538 @@
+:root{
+    --text-color: white;
+    --main-font: "Rubik", sans-serif;
+    --width-desktop: 90vw;
+
+    --accent-color:   #02B4C0;
+    --max-witdth: 1200px;
+    --background-color: #f9fafb;
+    --background-accent: #02102b;
+
+    --background-card: #02102b;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--main-font);
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--background-color);
+}
+
+.hide{
+    display: none !important;
+}
+
+#menuButton {
+    display: none;
+    width: 4em;
+    height: 4em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn{
+    background: #02B4C0;
+    border: 2px solid #02B4C0;
+    color: #ffffff;
+    padding: 13px 32px;
+    font-weight: 700 ;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    letter-spacing: 1px;
+}
+
+.btn:hover{
+    background: #ffffff;
+    border: 2px solid #02B4C0;
+    color: #02B4C0;
+}
+
+.button{
+    background: #02B4C0;
+    border: 2px solid #02B4C0;
+    color: #ffffff;
+    padding: 10px 0px;
+    font-weight: 700;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    width: 100%;
+}
+
+.button:hover{
+    background: #ffffff;
+    border: 2px solid #02B4C0;
+    color: #02B4C0;
+}
+.button:disabled{
+    background: #ffffff;
+    border: 2px solid #02B4C0;
+    color: #02B4C0;
+    cursor: unset;
+}
+.wrapper-loader{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--background-accent);
+    color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-x: hidden; 
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #02B4C0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 300;
+}
+.contract_details_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.row_dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 650px;
+    gap: 20px;
+}
+.subtitle{
+    font-size: 15px;
+    font-weight: 600;
+}
+.row_information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.column_information{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#menuButton:hover {
+    transform: scale(1.1);
+}
+
+.main {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.information{   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 30vw;
+    min-width: 600px;    
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 59%) 6px 6px 20px 6px;
+    border-radius: 20px;
+    
+    padding: 1rem;
+    margin: 50px 0px;
+    background: #0C193E;
+    color: #ffffff;
+}
+#total_usd_locked,#total_deposit_count,#total_referral_bonus,#total_partnerships{
+    font-weight: 500;
+    font-size: 18px;
+}
+.contract_info{
+    background: #2E4474;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+
+}
+#tax{
+    color: #ff4949;
+}
+
+.earnings_stat{
+    background-color: #4363a9;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    min-width: 900px;
+    color: black;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 59%) 6px 6px 20px 6px;
+    border-radius: 20px;
+    padding: 2rem;
+
+    /* width: var(--width-desktop) !important; */
+    max-width: var(--max-witdth) !important;    
+    margin: 50px 0px;
+    width: 30vw;
+    background-color: #6ad3dac9;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url(../media/background.png) no-repeat center/cover;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper-dashboard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #02102b;
+    background: url(../media/background_dark.jpg) no-repeat center/cover;
+}
+.contract_details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+.important{
+    font-size: 12px;
+}
+header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    top: 0px;
+    z-index: 99;
+    letter-spacing: 1px;
+}
+.shade{
+    background: #ffffff;
+}
+.open{
+    background: #ffffff;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--width-desktop);
+    max-width: var(--max-witdth);
+    padding: 21px 0px;
+}
+.logo-header{
+    max-height: 45px;   
+    max-width: 100%;
+}
+.right-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.right-header a {
+    color: #12103D;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 500ms ease;
+}
+
+.right-header a:hover{
+    color: #02B4C0;
+}
+
+.address_statistics{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: 
+    space-between;
+    width: 100%;
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 25%;
+    flex-grow: 0;
+    background-color: var(--background-card);
+    color: white;
+    padding: 10px;
+    border-radius: 16px;    
+    gap: 5px;
+    box-shadow: #4363a9 4px 4px;
+}
+
+.approve,.deposit,.automate{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#sell{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#approve_input,#deposit_input,#automate_input{
+    flex: 2;
+    border: unset !important;
+    border-bottom: 1px solid #E0E0E0 !important;
+    border-radius: 0 !important;
+    padding: 5px 10px;
+    background: unset;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.wallet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wallet_dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #6ad3dac9 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 70%;
+    gap: 5px;
+}
+.example{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #6ad3dac9 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+}
+.dashboard_first{
+    flex-basis: 46%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: #4363a9 5px 5px;
+
+}
+.dashboard_second{
+    flex-basis: 46%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: #4363a9 5px 5px;
+}
+
+.strong{
+    font-weight: 600;
+}
+.small{
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+.dashboard_input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dashboard_interact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text_center{
+    text-align: center;
+}
+
+.header_user{
+    display: flex;
+    flex-direction: row;
+}
+
+.referral{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: #4363a9 5px 5px;
+    gap: 20px;
+}
+
+#ref,#referrer{
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0px;
+    text-align: center;
+}
+.alert{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+}
+#alert_approve{
+    background-color: #10c15c;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+}
+#copy{
+    border: none;
+    background-color: #02B4C0;
+    border-radius: 0px 3px 3px 0px;
+}
+.button_copy{
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+}
+.wrapper_copy{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#clipboard {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-right: -150px;
+    background-color: black;
+    padding: 6px;
+    border-radius: 11px;
+    font-size: 0.8rem;
+}
+@media only screen and (max-width: 768px) {
+    #menuButton{
+        display: flex;
+    }   
+    .left-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .information,.dashboard{   
+        width: 95vw;
+        min-width: unset;
+        box-sizing: border-box;
+    }
+    #sidebar{
+        display: none;
+        position: fixed;
+        background-color: white;
+        top: 95px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .dashboard{
+        padding: 1rem;
+    }
+    .row_dashboard,.address_statistics,.row_information{
+        flex-direction: column;
+    }
+    .row_dashboard{
+        gap: 10px;
+    }
+    .row_information{
+        gap: 10px;
+    }
+    .dashboard_second,.dashboard_first{
+        gap: 20px;
+    }
+    .contract_details_wrapper{
+        flex-direction: column-reverse;
+    }
+    .example{
+        font-size: 14px;
+    }
+    #clipboard{
+        margin-right: -30px;
+        margin-top: -45px;
+    }
+}

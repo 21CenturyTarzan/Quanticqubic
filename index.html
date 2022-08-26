@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <link rel="canonical" href="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="media/favicon.png"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Qubics</title>
+    </head>
+    <body>
+        <div class="wrapper-loader">
+            <img src="./media/logo-white.png" />
+            <div class="loader"></div>
+        </div>
+        <header id="header">
+            <div class="header">
+                <a href="#" class="left-header">
+                    <img src="media/logo.png" class="logo-header" />
+                    <input
+                        id="menuButton"
+                        type="image"
+                        src="media/menu_add.svg"
+                    />
+                </a>
+                <div id="sidebar" class="right-header">
+                    <a
+                        id=""
+                        href="https://bscscan.com/address/0x4d9dda243b0aeffbb23ca1ab3f186507e2706920#code"
+                        class="menu"
+                        >Contract</a
+                    >
+                    <a
+                        id=""
+                        href="https://discord.com/invite/pMfPQYy56D"
+                        class="menu"
+                        >Discord</a
+                    >
+                    <a id="" href="https://t.me/quantic_finance" class="menu"
+                        >Telegram</a
+                    >
+                    <div class="wallet">
+                        <div id="prepare">
+                            <button class="btn btn-primary" id="btn-connect">
+                                Connect wallet
+                            </button>
+                        </div>
+                        <div id="connected" style="display: none">
+                            <button class="btn btn-primary" id="btn-disconnect">
+                                Disconnect wallet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="wrapper">
+                <section class="information">
+                    <div class="contract_details_wrapper">
+                        <div class="contract_details">
+                            <h2>Statistics</h2>
+                            <div>
+                                <div class="row" style="font-weight: 600">
+                                    <div class="text">
+                                        Up to
+                                        <span class="number"
+                                            ><span class="daily_return"></span
+                                            >%</span
+                                        >
+                                        Daily &#126;
+                                        <span class="number"
+                                            ><span class="annual_return"></span
+                                            >%</span
+                                        >
+                                        APR in BUSD
+                                    </div>
+                                </div>
+                                <div class="row" style="font-weight: 600">
+                                    <div class="text">
+                                        <span class="number"
+                                            ><span class="referral_bonus"></span
+                                            >%</span
+                                        >
+                                        Referral Bonus
+                                    </div>
+                                </div>
+                                <div class="row" style="font-weight: 600">
+                                    <div class="text">
+                                        <span class="number"
+                                            ><span class="contract_tax"></span
+                                            >%</span
+                                        >
+                                        Tax
+                                    </div>
+                                </div>
+                                <div class="row" style="font-weight: 600">
+                                    <div class="text">
+                                        <span class="number"
+                                            ><span class="cutoff_timer"></span
+                                        ></span>
+                                        Hours Rewards Accumulation Cut-Off
+                                    </div>
+                                </div>
+                                <div class="row" style="font-weight: 600">
+                                    <div class="text">
+                                        <span class="number"
+                                            ><span
+                                                class="mandatory_compound"
+                                            ></span
+                                        ></span>
+                                        Mandatory Compound Feature
+                                    </div>
+                                </div>
+                                <div class="row" style="font-weight: 600">
+                                    <div class="text">
+                                        <span class="number"
+                                            ><span class="tax"></span></span
+                                        >% Contract Fee For Early Withdrawals.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="subtitle">
+                                    Benefits for Quantic Holders:
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Up to
+                                        <span class="number">1.7%</span>
+                                        stacking compound bonus when compounding
+                                        every
+                                        <span class="number"
+                                            ><span
+                                                class="compound_timer"
+                                            ></span></span
+                                        >hrs+ with a max bonus of
+                                        <span class="max_bonus"></span>% based
+                                        on number of Quantic tokens held.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Extra Referral Bonuses based on the
+                                        number of Quantic tokens held.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        3% of the tax will be used to buy back
+                                        Quantic token.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="subtitle">
+                                    Partnership Bonuses for Projects:
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Extra Stacking Compound bonuses for all
+                                        holders of Partnership token
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Extra Referral Bonuses for all holders
+                                        of Partnership token
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        100% of Initial Partnership Agreement
+                                        Cost will go into contract and will
+                                        remain untouchable.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Partnership Token can use referral
+                                        bonuses to buyback/market their token
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="subtitle">Automation:</div>
+                                <div class="row">
+                                    <div class="text">
+                                        To enable this function Investors will
+                                        need an initial deposit of 500 BUSD or
+                                        greater.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Investors that qualifies can
+                                        enable/disable automation at any time.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Investors that qualifies can choose
+                                        compound intervals between 4 and 24
+                                        (suggest to choose 12-24 to receive
+                                        stacking Quantic/Partnership bonuses)
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Automation will follow 6+1 Strategy.
+                                        Compound for 6 days and claim on 7th
+                                        day. ALL Automatic.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text">
+                                        Automation fee of 1% per compound/claim
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column_information">
+                            <div class="contract_info">
+                                Total BUSD Locked
+                                <span id="total_usd_locked">-</span>
+                            </div>
+                            <div class="contract_info">
+                                Total Deposit Count
+                                <span id="total_deposit_count">-</span>
+                            </div>
+                            <div class="contract_info">
+                                Total Partnerships
+                                <span id="total_partnerships">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--div class="important">
+                    <p>
+                        To ensure sustainability and longevity of the project, AND as an enhancement from the previous similar miner game, the Qubics team has implemented a feature that would encourage/enforce users to continuously compound before taking profit.
+                    </p>
+                    <p>
+                        Users should compound <span class="mandatory_compound"></span> no. of times before they can withdraw. Should a user decide not to compound or buy more Qubics using his earnings, and continuously withdraw, users will be charged with a <span class="tax"></span>% feedback tax that will remain part of the contract.
+                    </p>
+        
+                    <p>
+                        In Addition, to further encourage the community to compound, there will be an additional <span class="compound_bonus"></span>% bonus for each compound action that the user will do, which can stack up to <span class="max_bonus"></span>%. By doing so, this will ensure the long term potential profit of every investor.
+                    </p>
+                    <p>
+                        The best strategy that the team can recommend is to compound for 6 days and harvest 1 day a week. This will increase the users investment at the same time increasing the daily yield earnings. This strategy has already been tried and tested by several project and is proven effective.
+                    </p>
+                    <p>
+                        High Risk! Funds that are used to initially buy Qubics (including compound) cannot be withdrawn, however your Qubics will indefinitely work and accumulate rewards for you. Please use the application at your own risk.
+                    </p>  
+                </div-->
+                </section>
+            </div>
+            <div class="wrapper-dashboard">
+                <section class="dashboard">
+                    <h1>Your Dashboard</h1>
+                    <div class="address_statistics">
+                        <div class="stat">
+                            Initial Deposit
+                            <span id="initial_deposit" class="strong">-</span>
+                            BUSD
+                        </div>
+                        <div class="stat">
+                            Total Deposit
+                            <span id="total_deposit" class="strong">-</span>
+                            BUSD
+                        </div>
+                        <div class="stat">
+                            Total Claimed
+                            <span id="sold_crops" class="strong">-</span> BUSD
+                        </div>
+                        <div class="stat">
+                            <span
+                                >Referral Rewards (<span id="referral_number"
+                                    >-</span
+                                >)</span
+                            >
+                            <span id="referral_rewards" class="strong">-</span>
+                            BUSD
+                        </div>
+                    </div>
+                    <div class="dashboard_interact">
+                        <div class="row_dashboard">
+                            <div class="dashboard_first">
+                                <div class="row">
+                                    <div class="example">
+                                        <div class="strong">Buy Example</div>
+                                        <div>100 BUSD gets you:</div>
+                                        <div>
+                                            Qubics:
+                                            <span id="example_farmers">0</span>
+                                        </div>
+                                        <div>
+                                            Daily:
+                                            <span id="example_daily">0</span>
+                                            BUSD
+                                        </div>
+                                    </div>
+                                    <div class="wallet_dashboard">
+                                        <span class="strong">Wallet</span>
+                                        <span id="balance">0</span> BUSD
+                                    </div>
+                                </div>
+                                <div class="dashboard_input">
+                                    <div class="approve">
+                                        <div class="strong">
+                                            1. Approve BUSD
+                                            <span class="small"
+                                                >(<span id="approved_value"
+                                                    >0</span
+                                                >
+                                                BUSD approved)</span
+                                            >
+                                        </div>
+                                        <input
+                                            id="approve_input"
+                                            min="10"
+                                            step="1"
+                                            type="number"
+                                            value="100"
+                                        />
+                                        <button
+                                            id="approve_button"
+                                            class="button"
+                                        >
+                                            Approve BUSD
+                                        </button>
+                                    </div>
+                                    <div class="deposit">
+                                        <div class="strong">
+                                            2. Deposit BUSD
+                                            <span class="small"
+                                                >(min
+                                                <span id="deposit_min">0</span>,
+                                                max
+                                                <span id="deposit_max">0</span
+                                                >)</span
+                                            >
+                                        </div>
+                                        <input
+                                            id="deposit_input"
+                                            min="10"
+                                            step="1"
+                                            type="number"
+                                        />
+                                        <button
+                                            id="deposit_button"
+                                            class="button"
+                                            disabled
+                                        >
+                                            Buy
+                                            <span id="quote">0.0</span> Qubics
+                                        </button>
+                                    </div>
+                                    <div class="automate">
+                                        <div class="strong">
+                                            3. Automate
+                                            <span class="small"
+                                                >every (min 4, max 24)
+                                                hours</span
+                                            >
+                                        </div>
+                                        <select id="automate_input">
+                                            <option
+                                                value="4"
+                                                style="color: black"
+                                            >
+                                                4
+                                            </option>
+                                            <option
+                                                value="6"
+                                                style="color: black"
+                                            >
+                                                6
+                                            </option>
+                                            <option
+                                                value="8"
+                                                style="color: black"
+                                            >
+                                                8
+                                            </option>
+                                            <option
+                                                selected="selected"
+                                                value="12"
+                                                style="color: black"
+                                            >
+                                                12
+                                            </option>
+                                            <option
+                                                value="24"
+                                                style="color: black"
+                                            >
+                                                24
+                                            </option>
+                                        </select>
+                                        <button
+                                            id="automate_button"
+                                            class="button"
+                                            disabled
+                                        >
+                                            <span id="toggle_automate"
+                                                >Enable Automate</span
+                                            >
+                                            <span id="runhours"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard_second column">
+                                <div class="header_user">
+                                    <div class="text_center">
+                                        <div>Qubics:</div>
+                                        <div>
+                                            <span id="farmers">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="strong earnings_stat">
+                                    <span id="earnings">-</span> Rewards
+                                </div>
+                                <div class="text_center">
+                                    <div>Estimated daily yield:</div>
+                                    <div><span id="daily">0</span> BUSD</div>
+                                </div>
+                                <div class="text_center">
+                                    <div class="small">
+                                        Rewards will be full in:
+                                    </div>
+                                    <div>
+                                        <div class="time_cutoff strong">
+                                            <span id="hours_cutoff">--</span
+                                            >:<span id="minutes_cutoff">--</span
+                                            >:<span id="seconds_cutoff"
+                                                >--</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span id="bonus_quantic">0</span>% Bonus
+                                    from Quantic
+                                </div>
+                                <div>
+                                    <span id="bonus_partnerships">0</span>%
+                                    Bonus from Partnership
+                                </div>
+                                <div class="small">
+                                    Compound Count:
+                                    <span id="compound_count" class="strong"
+                                        >-</span
+                                    >
+                                    Times
+                                </div>
+                                <button id="sell" class="button" disabled>
+                                    Claim Rewards
+                                    <span id="tax"></span>
+                                </button>
+                                <button id="compound" class="button" disabled>
+                                    Compound <span id="bonus"></span>
+                                </button>
+
+                                <div class="text_center">
+                                    <span
+                                        class="small"
+                                        style="text-align: center"
+                                    >
+                                        Time until next compound bonus is
+                                        activated:
+                                    </span>
+                                    <div>
+                                        <div id="time_compound" class="strong">
+                                            <span id="hours_compound">--</span
+                                            >:<span id="minutes_compound"
+                                                >--</span
+                                            >:<span id="seconds_compound"
+                                                >--</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="referral center_text"
+                        style="text-align: center"
+                    >
+                        <span class="subtitle">Referrer Address</span>
+                        <input id="referrer" readonly />
+                        <span class="subtitle">Your Referral Link</span>
+                        <span class="wrapper_copy"
+                            ><input id="ref" readonly /><button id="copy">
+                                <img
+                                    class="button_copy"
+                                    src="./media/copy.png"
+                                />
+                            </button>
+                            <div id="clipboard" style="display: none">
+                                saved to the clipboard
+                            </div></span
+                        >
+                        <span class="hide compound_bonus">-</span>
+                        <div>
+                            Earn
+                            <span class="strong"
+                                ><span class="referral_bonus">-</span>%</span
+                            >
+                            of every buy when someone uses your referral link!
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="alert">
+            <div class="hide" id="alert_approve">
+                <span class="approved_value_alert">0</span> BUSD Approved
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="js/sidebar.js" type="module"></script>
+<script
+    type="text/javascript"
+    src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"
+></script>
+<script
+    type="text/javascript"
+    src="https://unpkg.com/web3modal@1.9.5/dist/index.js"
+></script>
+<script
+    type="text/javascript"
+    src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"
+></script>
+<script
+    type="text/javascript"
+    src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"
+></script>
+
+<script src="js/app.js" type="module"></script>
